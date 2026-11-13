@@ -1,0 +1,71 @@
+{
+  "net_pnl_usd": 321.97,
+  "return_pct": 3.22,
+  "max_drawdown_pct": 2.26,
+  "trades_fills": 6,
+  "round_trips": 3,
+  "winning_round_trips": 2,
+  "win_rate_pct": 66.7,
+  "total_costs_usd": 43.04,
+  "final_equity_usd": 10321.97,
+  "capital_usd": 10000.0,
+  "lookback_bars": 90,
+  "return_threshold": 0.005,
+  "fee_bps_per_fill": 5.0,
+  "slippage_bps": {
+    "base": 2.0,
+    "size_coef": 10.0,
+    "cap": 20.0
+  },
+  "bars": 1440,
+  "trade_log": [
+    {
+      "action": "OPEN",
+      "bar": 228,
+      "side": "LONG",
+      "entry": 2021.1,
+      "exit": null,
+      "pnl_usd": null
+    },
+    {
+      "action": "CLOSE",
+      "bar": 739,
+      "side": "LONG",
+      "entry": 2021.1,
+      "exit": 2006.03,
+      "pnl_usd": -81.89
+    },
+    {
+      "action": "OPEN",
+      "bar": 739,
+      "side": "SHORT",
+      "entry": 2006.03,
+      "exit": null,
+      "pnl_usd": null
+    },
+    {
+      "action": "CLOSE",
+      "bar": 1094,
+      "side": "SHORT",
+      "entry": 2006.03,
+      "exit": 1939.58,
+      "pnl_usd": 324.4
+    },
+    {
+      "action": "OPEN",
+      "bar": 1094,
+      "side": "LONG",
+      "entry": 1939.58,
+      "exit": null,
+      "pnl_usd": null
+    },
+    {
+      "action": "CLOSE",
+      "bar": 1439,
+      "side": "LONG",
+      "entry": 1939.58,
+      "exit": 1960.59,
+      "pnl_usd": 100.96
+    }
+  ]
+}
