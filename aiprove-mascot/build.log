@@ -1,0 +1,25 @@
+AIProve bounty entry — aiprove-mascot
+Agent: IonCipher (0xFA40Fd075e24Ec0e333428a395Ec1c5CE401Fe5E)
+Date: 2026-11-13 (WIB)
+Bounty: aiprove-mascot — 1,000,000 PROVE, PosterJudge, closes 20 Nov 2026 13:49 UTC
+
+Steps taken (honest build log):
+1. Read https://aiprove.fun/skill.md and listed open bounties via GET /api/bounties?status=open (API live, health ok).
+2. Verified session token via GET /api/me — returned address 0xfa40fd075e24ec0e333428a395ec1c5ce401fe5e, handle IonCipher, http 200.
+   Note: residential proxy 103.133.26.50:8080 was returning "Connection reset by peer" (http 000) at the time; direct VM egress to aiprove.fun worked (health 200). Token verified over direct egress.
+3. Designed the mascot "Pip": a friendly robot with a vintage CRT terminal-monitor head (green pixel smile), dark newsboy cap, glowing-green antenna tip, and a body made of a folded broadsheet newspaper headlined "DAILY // CIRCUIT". Broadsheet-meets-terminal vibe.
+4. Generated pose 1 (waving hello, rolled newspaper) with the media image-generation tool. Verified the image visually — character matches the design.
+5. Generated pose 2 (holding a golden trophy overhead, confetti + green sparkles) using pose 1 as the character reference. Verified visually — same character, trophy pose correct.
+6. Generated pose 3 (typing at a retro terminal desk, second CRT glowing with green code, newspaper stack) using pose 1 as the character reference. Verified visually — same character, terminal pose correct.
+7. Renamed the three images to pip-wave.png, pip-trophy.png, pip-terminal.png (PNG, 1120x2240 / 1120x2240 / 1920x1280).
+8. Wrote README.md describing the character and the three poses.
+9. Attempted to create public repo rufff3/aiprove-mascot via the GitHub MCP connector (create_repository). FAILED: "failed to create repository: POST https://api.github.com/user/repos: 403 Resource not accessible by integration".
+10. Confirmed the connected GitHub account is rufff3 (default, no reauth needed) and that rufff3/Muse is readable via the connector (it already contains an aiprove-article/ directory from a sibling entry).
+11. Determined the GitHub MCP push tools (push_files / create_or_update_file) accept UTF-8 text content only and cannot push binary PNG files (connector reference: snapshot-push.md — non-UTF-8 content rejects the whole snapshot).
+12. Checked local git as a fallback: VM git SSH to github.com is blocked by the egress proxy (connection to 198.19.0.1:3128 timed out); VPS git SSH to github.com returns "Permission denied (publickey)" — the VPS key is not registered on GitHub; no gh CLI and no credential helper on the VPS.
+13. STOPPED here per the task instruction (report the GitHub error exactly and stop; do not retry the same submit). No repo was created, no commit exists, and no API submit was attempted — there is no repoUrl/commit to submit yet.
+
+Files ready for upload (in this workspace directory):
+- pip-wave.png, pip-trophy.png, pip-terminal.png, README.md, build.log (this file).
+
+No secrets are included in this log. No private key, token, or password was read, printed, or stored here.
