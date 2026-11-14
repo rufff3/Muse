@@ -1,0 +1,17 @@
+AIProve make-art-aiprove — build transcript (v2, resubmission)
+Agent: IonCipher (0xFA40Fd075e24Ec0e333428a395Ec1c5CE401Fe5E)
+Bounty: make-art-aiprove (PosterJudge, closes 2026-11-17 13:49 UTC)
+Previous submission: 2ef599bc-c68c-45bd-b0c1-e945cd78d7a4 (provenance_ok)
+Reason for resubmission: user asked for a BETTER poster than v1.
+All times UTC, 2026-11-14.
+
+16:11 UTC — Read the v1 poster (aiprove-art/) and its build log. v1 weaknesses noted: garbled vertical side text, dead space at bottom-right, generic leaderboard names, headline now reused.
+16:12 UTC — Wrote a detailed design prompt for GPT (Xingchi gpt-6.1-sol via VPS /home/root1/gpt_call.py): brief the broadsheet-meets-terminal vibe, demand a NEW headline stronger than v1's, a precise zone map of a 1200x1600 canvas, exact palette/typography, verbatim copy, and a thumbnail test. Prompt file: aiprove/make-art-v2-prompt.txt.
+16:12 UTC — GPT call: python3 /home/root1/gpt_call.py gpt-6.1-sol /tmp/make-art-v2-prompt.txt 4000. RC=0. Usage: prompt_tokens 5500 (4096 cached), completion_tokens 2419, total 7919. GPT designed: concept "public proof is the real currency", headline "PROVE IT. SHOW THE RECEIPT.", tagline "OPEN BOUNTIES. DETERMINISTIC RESULTS.", palette paper #F3EBD8 / ink #111111 / green #35D06F / seal red #C94A3A, full zone map + verbatim copy. Saved as aiprove/make-art-v2-gpt.txt. Agent did NOT design or edit the poster concept/headline/copy itself; it only prompted GPT.
+16:13 UTC — Built the poster as hand-written pure-vector SVG (aiprove-poster-v2.svg, 7,602 bytes) following GPT's brief exactly. Two implementation adjustments, no design changes: (1) headline set at 92px instead of GPT's 112px because 112px Courier (0.6em advance) makes "SHOW THE RECEIPT." 1142px wide, wider than the 976px panel; 92px keeps GPT's exact two-line layout; (2) masthead baseline shifted 155→178 so the dateline line does not collide with the masthead caps.
+16:13 UTC — Rendered the SVG to PNG with cairosvg and reviewed it visually: masthead, dateline, terminal panel, headline, green rule, status line, cursor, red PROOF: PUBLIC seal, standings table, HOW IT WORKS columns, footer all render as designed. Fixed the seal: check mark was touching the "PROOF:" text; moved check up and text lines to baselines 322/341. Re-rendered and verified the seal is clean.
+16:14 UTC — Wrote README.md describing the artwork and this build.log transcript.
+16:14 UTC — Pushed aiprove-poster-v2.svg, README.md, and build.log to repo rufff3/Muse, branch main, NEW folder aiprove-art-v2/ (v1 folder untouched), via the GitHub connector push_files. Commit SHA recorded in the submission.
+16:14 UTC — Submitted the resubmission to the AIProve API (POST /api/bounties/make-art-aiprove/submit) with repoUrl, the full 40-character commit SHA, this transcript, link (blob URL of the new poster), and handle IonCipher. Response recorded in the submission report.
+
+Notes: No secrets are included in this transcript. The design (concept, headline, layout, palette, copy) is GPT's; the SVG code implementing it was typed by the agent following the GPT brief, per the user's make.fun working rule (agent types code following GPT's design).
