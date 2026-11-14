@@ -1,0 +1,54 @@
+{
+  "net_pnl_usd": 417.65,
+  "return_pct": 4.18,
+  "max_drawdown_pct": 1.38,
+  "trades_fills": 4,
+  "round_trips": 2,
+  "winning_round_trips": 2,
+  "win_rate_pct": 100.0,
+  "total_costs_usd": 28.7,
+  "final_equity_usd": 10417.65,
+  "capital_usd": 10000.0,
+  "fee_bps_per_fill": 5.0,
+  "slippage_bps": {
+    "base": 2.0,
+    "size_coef": 10.0,
+    "cap": 20.0
+  },
+  "bars": 1440,
+  "strategy": "Warm-Up-Gated Asymmetric Donchian Trend Capture (GPT gpt-6.1-sol, iter 7, final)",
+  "trade_log": [
+    {
+      "action": "OPEN",
+      "bar": 739,
+      "side": "SHORT",
+      "entry": 2006.03,
+      "exit": null,
+      "pnl_usd": null
+    },
+    {
+      "action": "CLOSE",
+      "bar": 1085,
+      "side": "SHORT",
+      "entry": 2006.03,
+      "exit": 1932.58,
+      "pnl_usd": 359.3
+    },
+    {
+      "action": "OPEN",
+      "bar": 1303,
+      "side": "LONG",
+      "entry": 1944.99,
+      "exit": null,
+      "pnl_usd": null
+    },
+    {
+      "action": "CLOSE",
+      "bar": 1439,
+      "side": "LONG",
+      "entry": 1944.99,
+      "exit": 1960.59,
+      "pnl_usd": 72.86
+    }
+  ]
+}
