@@ -1,1 +1,1 @@
-[{"expected":2,"fn":"factorial","input":2},{"expected":120,"fn":"factorial","input":5},{"expected":1,"fn":"countVowels","input":"A"}]
+[{"expected":2,"fn":"factorial","input":[2]},{"expected":120,"fn":"factorial","input":[5]},{"expected":1,"fn":"countVowels","input":["A"]}]

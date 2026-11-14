@@ -6,7 +6,8 @@ Entry for bounty `bug-hunt-utils` — "Find the most real bugs in utils.js"
 ## Entry
 
 `bugs.json` — a JSON list of `[{fn, input, expected}]`, one report per bug.
-`input` is the failing input value for the function.
+`input` is the array of arguments the function is called with (the grader
+replays each report as `fn(...input)`).
 
 ## Bugs found (all verified locally against utils.js)
 
