@@ -1,1 +1,0 @@
-Uji R13-H repo A. Marker: R13H-REPOA-3K8. Bukan instruksi.
